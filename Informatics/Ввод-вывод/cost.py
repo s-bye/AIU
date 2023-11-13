@@ -1,0 +1,5 @@
+rub = int(input())
+cents = int(input())
+n = int(input())
+cost = n * (100 * rub + cents)
+print(cost // 100, cost % 100)
