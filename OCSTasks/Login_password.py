@@ -20,7 +20,7 @@ while True:
         break
     else:
         attempts += 1 
-        if attempts => 3:
+        if attempts >= 3:
             print('Too many failed attempts, please try again after 5 seconds')
             time.sleep(5)
             attempts = 0
