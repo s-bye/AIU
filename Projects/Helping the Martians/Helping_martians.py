@@ -1,0 +1,5 @@
+import random 
+CARGO_WEIGHT = 713
+NUM_BOXES = 3
+BOX_LOCATIONS = [0, 0, 0]
+CARGO_FOUND = False
