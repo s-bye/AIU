@@ -18,7 +18,7 @@ while not cargo_found:
         if box_locations[i] == kilometer_mark:
             total_weight += cargo_weight
         else:
-            BOX_LOCATIONS[i] = random.randint(0, 7)
+            box_locations[i] = random.randint(0, 7)
             
     if total_weight == cargo_weight:
         cargo_found  = True
