@@ -1,10 +1,10 @@
 def calculate_area(x, y, n):
-    polygon_area = 0.0
+    polygon_area = 0
     j = n - 1
     for i in range(0, n):
         polygon_area += (x[j] + x[i]) * (y[j] - y[i])
         j = i
-    return abs(polygon_area / 2.0)
+    return abs(polygon_area / 2)
 
 
 def main():
