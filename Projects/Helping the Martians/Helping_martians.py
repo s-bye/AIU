@@ -24,10 +24,13 @@ def validate_input(digit):
 
 def main():
     cargo_weight = [300, 250, 163]
-
+    
+    print("Welcome! You need to help the Martians, and to do that, you need to find the cargoes.")
+    print("You'll be asked to enter kilometer marks from 1 to 7, where the cargo might be buried.")
+    
     while True:
         cargo_location = generate_cargo_location()
-        print(f'Current cargo location: {cargo_location}')
+        print(f'Current cargoes location: {cargo_location}')
         kilometer_marks = []
         
         for i in range(3):
@@ -37,16 +40,16 @@ def main():
                     kilometer_marks.append(kilometer_mark)
                     break
                 else:
-                    print('1 to 7')
+                    print('Please write a kilometer mark from 1 to 7.')
         
         total_weight = calculate_total_weight(cargo_weight, kilometer_marks, cargo_location)
         cargo_found = check_cargo_location(kilometer_marks, cargo_location, cargo_weight)
         
         if cargo_found and total_weight == 713:
-            print('Yes')
+            print('Congratulations! You found all the cargoes!')
             break
         else:
-            print('No')
+            print('Unfortunately, the shipments were not found. Cargoes have changed their location, please enter new kilometr marks.')
 
 if __name__ == "__main__":
     main()
