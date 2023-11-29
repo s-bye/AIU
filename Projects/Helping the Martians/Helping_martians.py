@@ -19,6 +19,9 @@ def check_cargo_location(kilometer_marks, cargo_location, cargo_weight):
     
     return total_weight == 713
 
+def validate_input(digit):
+    return 0 < digit < 8
+
 def main():
     cargo_weight = [300, 250, 163]
 
@@ -28,8 +31,13 @@ def main():
         kilometer_marks = []
         
         for i in range(3):
-            kilometer_mark = int(input(f'Enter the kilometer mark for box {i + 1}: '))
-            kilometer_marks.append(kilometer_mark)
+            while True:
+                kilometer_mark = int(input(f'Enter the kilometer mark for box {i + 1}: '))
+                if validate_input(kilometer_mark):
+                    kilometer_marks.append(kilometer_mark)
+                    break
+                else:
+                    print('1 to 7')
         
         total_weight = calculate_total_weight(cargo_weight, kilometer_marks, cargo_location)
         cargo_found = check_cargo_location(kilometer_marks, cargo_location, cargo_weight)
