@@ -1,13 +1,23 @@
 import random
 
-cargo_location = [3, 5, 6]
 cargo_weight = [300, 250, 163]
-random.shuffle(cargo_location)
-random.shuffle(cargo_weight)
-cargo_found = False
 
-while not cargo_found:
+while True:
+    cargo_location = random.sample(range(1, 8), 3)
     print(f'Current cargo location: {cargo_location}')
+    kilometer_marks = []
     for i in range(3):
-        kilometer_mark = int(input(f"Enter the kilometer mark for box {i + 1}: "))
-        kilometer_mark.append(kilometer_mark)
+        kilometer_mark = int(input(f'Enter the kilometer mark for box {i + 1}: '))
+        kilometer_marks.append(kilometer_mark)
+    total_weight = 0
+    cargo_found = True
+    for i in range(3):
+        if kilometer_marks[i] != cargo_location[i]:
+            cargo_found = False
+            break
+        total_weight += cargo_weight[i]
+    if cargo_found and total_weight == 713:
+        print('Yes')
+        break
+    else:
+        print('No')
