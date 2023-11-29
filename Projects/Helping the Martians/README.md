@@ -2,6 +2,7 @@
 
 ## Description
 [![crash](https://i.imgur.com/Dep9M6c.jpg "crash")](https://i.imgur.com/Dep9M6c.jpg "crash")
+
 A console program was created to assist Martian visitors in locating their valuable cargo buried along their path on Earth. The Martians, in need of spare parts for their malfunctioning spaceship, buried their cargo in three boxes of varying sizes along a 7-kilometer path towards the nearest city. The cargo totaled 713 kilograms and was strategically buried with markers indicating distance and weight.
 
 [![Cargo](https://i.imgur.com/yiY5wDJ.jpg "Cargo")](https://i.imgur.com/yiY5wDJ.jpg "Cargo")
